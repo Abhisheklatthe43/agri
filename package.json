@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "AgriSmart AI - AI-Powered Agriculture Crop Advisory Assistant",
   "private": true,
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "scripts": {
     "install:all": "npm install && cd server && npm install && cd ../client && npm install",
     "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
