@@ -1,0 +1,21 @@
+{
+  "name": "agrismart-ai",
+  "version": "1.0.0",
+  "description": "AgriSmart AI - AI-Powered Agriculture Crop Advisory Assistant",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && cd server && npm install && cd ../client && npm install",
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev:server": "npm run dev --prefix server",
+    "dev:client": "npm run dev --prefix client",
+    "db:migrate": "npm --prefix server run db:migrate",
+    "build:client": "npm run build --prefix client",
+    "start": "npm start --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
